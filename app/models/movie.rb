@@ -1,4 +1,6 @@
 class Movie < ActiveRecord::Base
+	validates :title, :presence => true
+
 	def self.sort_by_title
 		Movie.find(:all,:order => "title")
 	end
