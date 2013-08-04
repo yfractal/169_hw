@@ -8,14 +8,17 @@ gem 'rails', '3.1.0'
 group :development, :test do
   gem 'sqlite3'
   gem 'ruby-debug19'
-
+  gem 'rspec-rails'
   gem 'capybara'
    # , :require => 'ruby-debug'
+  gem "factory_girl_rails", "~> 4.0"
+  gem 'simplecov'
 end
 # gem "cucumber-rails", "~> 1.3.0", require: false
 
 group :test do 
-    gem 'cucumber-rails'
+    gem "ZenTest", "~> 4.9.2"  
+    gem 'cucumber-rails',:require => false
     gem 'cucumber-rails-training-wheels'
     gem 'database_cleaner'
 end

@@ -14,7 +14,11 @@ Rottenpotatoes::Application.routes.draw do
   #   resources :products
   root :to => "movies#index"
 
-  resources :movies
+  resources :movies do 
+    member do 
+      get 'same_director'
+    end
+  end
 
   # Sample resource route with options:
   #   resources :products do

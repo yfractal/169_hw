@@ -34,6 +34,7 @@ Then(/^I should see the movies: "(.*?)"$/) do |movies|
 		}
 	end
 end
+
 Then(/^I should not see the movies: "(.*?)"$/) do |movies|
 	movies  = movies.split(",")
 	movies.each do |movie|
@@ -53,3 +54,9 @@ Then(/^I should see "(.*?)" before "(.*?)"$/) do |s1,s2|
 	page.body =~ regexp
 end
 
+Then(/^the director of "(.*?)" should be "(.*?)"$/) do |movie_title, director|
+	steps %{
+		Given I am on the details page for "#{movie_title}"
+		Then I should see "#{director}"
+	}
+end

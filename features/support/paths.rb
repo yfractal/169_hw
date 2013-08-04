@@ -18,10 +18,26 @@ module NavigationHelpers
 #################    
     when /^the RottenPotatoes? home page$/
       '/'
+    when /^the home page$/
+      '/'
     when /^the movies page$/
       '/movies'
     when /^the Create (.*) Movie page$/i
       "/movies/#{$1.downcase}"
+
+    when /^the edit page for "(.*)"$/i
+      m  = $1
+      id = Movie.find_by_title(m).id
+      "/movies/#{id}/edit"
+    when /^the Similar Movies page for "(.*)"$/
+      id = Movie.find_by_title($1).id
+      "/movies/#{id}/same_director"
+    when /^the details page for "(.*)"$/ 
+      m = $1
+      id = Movie.find_by_title(m).id
+      "/movies/#{id}"
+
+
     when /^the render New Movie page$/
       "/movies"
     when /^the "(.*)" movie page$/ 
