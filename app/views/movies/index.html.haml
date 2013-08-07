@@ -1,6 +1,12 @@
 -#  This file is app/views/movies/index.html.haml
 %h1 All Movies
-
+#login
+  - if @current_user
+    %p.welcome  Welcome, #{@current_user.name}!
+    = link_to 'Log Out', logout_path
+  - else
+    %p.login= link_to 'Log in with your GitHub account', '/auth/github/'
+    
 = form_tag :movies, :id => "ratings_form" ,:method => :get do
   = "Include"
   - for rating in @all_ratings do 

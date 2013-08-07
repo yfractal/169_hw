@@ -1,4 +1,16 @@
 Rottenpotatoes::Application.routes.draw do
+
+  # match 'auth/callback' =>  'sessions#create',:as => 'login'
+
+  match 'logout' => 'sessions#destroy'
+  match 'auth/:provider' =>  'sessions#create'
+  match 'auth/:provider/callback' =>  'sessions#create',:as => 'login'
+
+
+   get "sessions/create"
+
+  get "sessions/destroy"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -12,6 +24,8 @@ Rottenpotatoes::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  
+
   root :to => "movies#index"
 
   resources :movies do 

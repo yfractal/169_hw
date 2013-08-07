@@ -1,6 +1,10 @@
 source 'http://ruby.taobao.org/'
 gem 'rails', '3.1.0'
-
+gem "omniauth"
+gem "omniauth-github"
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-douban-oauth2'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
