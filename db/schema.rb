@@ -11,7 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130805012140) do
+ActiveRecord::Schema.define(:version => 20130807062905) do
+
+  create_table "identities", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "moviegoers", :force => true do |t|
     t.string   "name"
@@ -19,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20130805012140) do
     t.string   "uid"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "identity_id"
   end
 
   create_table "movies", :force => true do |t|
