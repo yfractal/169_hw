@@ -5,6 +5,7 @@ gem "omniauth-github"
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-douban-oauth2'
+gem 'heroku'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 

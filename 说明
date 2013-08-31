@@ -1,0 +1,13 @@
+
+cs169
+berkeley大学高年级课程，Software as a service,讲的是捷开发。这个也是以讲原理，规则为主。这个课程差最后3周作业的就学完了（拿到50%的分数就有edx的证明，我已经拿到50%以上的了）。
+
+
+内容有，ruby,rails,BDD(cucumber),TDD(rspec),重构,git,设计模式（没学），javascript(没学）等。
+
+这门课其实是以传授原理为主，比如关于TDD的first原则（Fast,Independent,Repeatable,Self-checking,Timely）.在比如是使用BDD和TDD原因。还讲了如何让用户提出好的寻求（5why原则），再比如在ui中用到的lo-fi ui,user story.
+
+这个学的东西非常多，我只能说我学过的东西，我翻翻书，或者搜索下，能写出来。大体是这种程度吧。
+
+这门课程的目的也是在于，讲一些原理性，规则性的东西。代码给出了，麻烦您看下代码吧。
+
